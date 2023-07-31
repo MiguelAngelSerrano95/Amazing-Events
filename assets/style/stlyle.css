@@ -1,0 +1,113 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    background-color: white;
+}
+
+h1{
+    font-size: 5rem;
+   margin-top: 1rem;
+     font-family:Medium 500 Italic;
+}
+.amazingeventslogo{
+    width: 15vw;
+    margin-left: 1rem;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    min-width: 30%;
+   background-color:  white;
+}
+.amazingeventslogo{
+
+}
+
+a{
+    text-decoration: none;
+    font-size: x-large;
+    color: rgb(240, 234, 236);!important
+
+}
+
+main {
+    width:100vw;
+    background-color:  rgb(250, 250, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+   
+    min-height: 10vh;
+    background-color: white;
+}
+
+h5{
+    color: crimson;
+    font-size: 1.5rem;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 250, 194);
+    width:70%;
+    padding-bottom: 1.5rem;
+}
+
+input{
+    width: 40rem;
+}
+
+.textevents {
+    width: 40rem;
+    height: 10rem;
+}
+
+
+table,td,th,tr{
+outline: 1px solid black;
+padding:1%;
+
+
+}
+
+th{
+    background-color: crimson;
+    color: white;
+    
+}
+
+td{
+    text-align: center;
+}
+
+footer img{
+    width: 2rem;
+    
+    
+}
+.carousel{
+    width: 100vw;
+}
+.carousel-item img{
+ height: 50vh;
+ object-fit: cover;
+}
+
+
+@media(min-width:320px) and (max-width:767px){
+    .amazingeventslogo{
+        width: 40vw;
+    }
+}

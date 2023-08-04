@@ -11,7 +11,7 @@ function showevents (listevents , contenedordecard){
         <div class="card-body">
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text textcardamazing">${event.description}</p>
-            <a href="../pages/details.html" class="btn btn-primary align-self-end">Details</a>
+            <a href="./assets/pages/details.html" class="btn btn-primary align-self-end">Details</a>
         </div>
     </div>`
     }
@@ -19,18 +19,11 @@ function showevents (listevents , contenedordecard){
     console.log(listevents,contenedordecard);
     
 }
+ 
+    
 
-function upComingEvents (eventos) {
-    const eventFiltrados = [];
-    for (const evento of eventos){ 
-        if ( evento.date < data.currentDate){
-
-            eventFiltrados.push(evento)
-        }
-    } 
-    return eventFiltrados
-}
-const pastEvents = upComingEvents (data.events)
+console.log(amazingeventsdata);
+showevents (amazingeventsdata, contenedordecard)
 
 
-showevents(pastEvents,contenedordecard)
+

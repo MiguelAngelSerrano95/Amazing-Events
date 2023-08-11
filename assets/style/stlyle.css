@@ -2,9 +2,11 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+  
 }
 
 header{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,13 +22,13 @@ h1{
 
 
 .amazingeventslogo{
-    width: 15vw;
+    width: 10vw;
     margin-left: 1rem;
 }
 nav{
     display: flex;
     justify-content: space-around;
-    min-width: 30%;
+    min-width: 30vh;
    background-color:  white;
 }
 
@@ -38,7 +40,8 @@ a{
 }
 
 main {
-    width:100vw;
+    width: 100vw;
+ 
     background-color:  rgb(250, 250, 194);
     display: flex;
     flex-direction: column;
@@ -46,7 +49,9 @@ main {
 }
 
 .textcardamazing{
-    height: 5rem;
+    height: 15vh;
+    
+    
 }
 .amazingeventscard{
     height: 30vh;
@@ -58,9 +63,10 @@ main {
 }
 
 footer{
-   
+    width: 100vw;
     min-height: 10vh;
     background-color: white;
+    
 }
 
 h5{
@@ -104,12 +110,13 @@ td{
 }
 
 footer img{
-    width: 2rem;
+    width: 2vw;
+   
     
     
 }
 .carousel{
-    width: 100vw;
+    min-width: 100vw;
 }
 .carousel-item img{
  height: 50vh;

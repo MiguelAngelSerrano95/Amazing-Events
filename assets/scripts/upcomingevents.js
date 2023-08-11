@@ -2,8 +2,12 @@ let contenedordecard = document.getElementById("cartas")
 
 const amazingeventsdata = data.events;
 
+console.log(amazingeventsdata);
+
+
 function showevents (listevents , contenedordecard){
     let card=""
+    
     for(let event of listevents){
         card += ` <div class="card" style="width: 18rem;">
             
@@ -12,13 +16,13 @@ function showevents (listevents , contenedordecard){
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text textcardamazing">${event.description}</p>
         
-            <a href="../pages/details.html" class="btn btn-primary align-self-end">Details</a>
+            <a href="../pages/details.html?details=${event._id}" class="btn btn-primary align-self-end">Details</a>
             </div>
         </div>
     </div>`
     }
     contenedordecard.innerHTML=card
-   
+   console.log(card);
     
 }
 
@@ -32,7 +36,54 @@ function upComingEvents (eventos) {
     } 
     return eventFiltrados
 }
-const pastEvents = upComingEvents (data.events)
+const upEvents = upComingEvents (data.events)
 
 
-showevents(pastEvents,contenedordecard)
+showevents(upEvents,contenedordecard)
+
+
+let _checkAmazing = document.getElementById ("_checkAmazing")
+console.log(_checkAmazing);
+
+function filterCaterogory (amazingeventsdata){
+  let categoryRepeated =[]
+  for (const event of amazingeventsdata) {
+
+      categoryRepeated.push(event.category)
+  }
+return categoryRepeated
+}
+let categoryRepeated = filterCaterogory(amazingeventsdata)
+console.log(categoryRepeated);
+const categorySinRepeating = [... new Set(categoryRepeated)];
+console.log(categorySinRepeating);
+
+    function createCheck (category){
+        return  `<div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="${category}" name="${category}" id="${category}">
+                    <label class="form-check-label" for="${category}">${category}</label>
+                    </div>`
+      }     
+  
+     
+      function pintCheck (category, container){
+        for (const dato of category) {
+          let templete = createCheck(dato)
+          container.innerHTML += templete
+            console.log(templete);
+        } 
+      }
+      pintCheck( categorySinRepeating, _checkAmazing)
+
+
+
+
+
+
+
+
+
+
+
+
+      
